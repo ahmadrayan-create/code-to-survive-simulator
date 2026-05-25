@@ -2,8 +2,9 @@
 # CodeToSurvive: A Gamified Programming Survival Simulator
 
 <image-card alt="CodeToSurvive City Map Banner" src="URL_PLACEHOLDER_1" ></image-card>
+<img width="626" height="418" alt="image" src="https://github.com/user-attachments/assets/42d32ff1-b726-4fef-8ed5-27e075234374" />
+<img width="621" height="413" alt="image" src="https://github.com/user-attachments/assets/f9d9cedb-2314-467a-91ee-ad1c8d81bdc5" />
 
-**[UI SCREENSHOT INSTRUCTION]:** Launch the WPF application, navigate your player avatar to the center of the Main City map near the University and Software House. Ensure the HUD (Money, Energy, Skill, Reputation) is clearly visible in the top corners. Take a high-resolution, full-window screenshot to showcase the isometric world design and UI overlays, and replace this placeholder with your direct image URL.
 
 ## 1. Executive Overview
 
