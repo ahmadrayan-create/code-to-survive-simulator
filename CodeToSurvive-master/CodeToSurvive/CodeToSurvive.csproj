@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\background.png" />
+    <None Remove="Assets\bank-bg.png" />
+    <None Remove="Assets\Binary_Boutique.png" />
+    <None Remove="Assets\home-bg.png" />
+    <None Remove="Assets\softwre-bg.png" />
+    <None Remove="Assets\StockExchange_bg.png" />
+    <None Remove="Assets\Syntax_Snacks.png" />
+    <None Remove="Assets\uni-bg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CodeToSurvive.Language">
+      <HintPath>..\..\CodeToSurvive.Language\CodeToSurvive.Language\bin\Debug\net8.0\CodeToSurvive.Language.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\background.png" />
+    <Resource Include="Assets\bank-bg.png" />
+    <Resource Include="Assets\Binary_Boutique.png" />
+    <Resource Include="Assets\home-bg.png" />
+    <Resource Include="Assets\softwre-bg.png" />
+    <Resource Include="Assets\StockExchange_bg.png" />
+    <Resource Include="Assets\Syntax_Snacks.png" />
+    <Resource Include="Assets\uni-bg.png" />
+  </ItemGroup>
+
+</Project>

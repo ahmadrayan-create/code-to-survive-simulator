@@ -1,0 +1,95 @@
+﻿<Window x:Class="CodeToSurvive.University"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeToSurvive"
+        mc:Ignorable="d"
+        Title="University" Height="800"
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/uni-bg.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="260"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- LEFT: COURSES -->
+            <Border Grid.Column="0" Background="#AA000000" CornerRadius="12" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="📚 Courses" FontSize="22" FontWeight="Bold" Foreground="White"/>
+
+                    <Button Content="C++ Programming" Margin="0 10" Click="BtnCpp_Click"/>
+                    <Button Content="C# .NET" Margin="0 10" Click="BtnCSharp_Click"/>
+                    <Button Content="Web Development" Margin="0 10" Click="BtnWeb_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- CENTER: COURSE DETAILS -->
+            <Border Grid.Column="1" Background="#AA000000" CornerRadius="12" Padding="20" Margin="15 0">
+                <StackPanel>
+                    <TextBlock x:Name="CourseTitleText"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+
+                    <TextBlock x:Name="CourseDescriptionText"
+                               FontSize="16"
+                               Foreground="LightGray"
+                               Margin="0 10"
+                               TextWrapping="Wrap"/>
+
+                    <Separator Margin="10"/>
+
+                    <ProgressBar x:Name="CourseProgressBar"
+                                 Height="22"
+                                 Margin="0 10"
+                                 Maximum="100"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock x:Name="SkillGainText" Margin="20" Foreground="LightGreen"/>
+                        <TextBlock x:Name="EnergyCostText" Margin="20" Foreground="Orange"/>
+                    </StackPanel>
+
+                    <Button x:Name="BtnEnroll"
+                            Content="Enroll / Continue"
+                            Height="50"
+                            FontSize="16"
+                            Margin="0 20"
+                            Background="#FF22C55E"
+                            Click="BtnEnroll_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- RIGHT: HUD -->
+            <Border Grid.Column="2" Background="#AA000000" CornerRadius="12" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="🎓 Student Status"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+
+                    <TextBlock x:Name="UniMoneyText" Margin="0 8" Foreground="White"/>
+                    <TextBlock x:Name="UniEnergyText" Margin="0 8" Foreground="White"/>
+                    <TextBlock x:Name="UniSkillText" Margin="0 8" Foreground="White"/>
+                    <TextBlock x:Name="UniDayText" Margin="0 8" Foreground="White"/>
+
+                    <Separator Margin="10"/>
+
+                    <Button Content="← Return to City"
+                            Height="40"
+                            Background="#FFEF4444"
+                            Foreground="White"
+                            Click="BtnExitUniversity_Click"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

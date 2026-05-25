@@ -1,0 +1,91 @@
+﻿<Window x:Class="CodeToSurvive.SoftwareHouse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeToSurvive"
+        mc:Ignorable="d"
+        Title="SoftwareHouse" Height="800"
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/softwre-bg.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- LEFT: JOB LIST -->
+            <Border Grid.Column="0" Background="#AA000000" CornerRadius="12" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="💼 Jobs"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+
+                    <Button Content="Intern Task" Margin="0 10" Click="Intern_Click"/>
+                    <Button Content="Junior Developer" Margin="0 10" Click="Junior_Click"/>
+                    <Button Content="Mid Developer" Margin="0 10" Click="Mid_Click"/>
+                    <Button Content="Senior Developer" Margin="0 10" Click="Senior_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- CENTER: JOB DETAILS -->
+            <Border Grid.Column="1" Background="#AA000000" CornerRadius="12" Padding="20" Margin="15 0">
+                <StackPanel>
+                    <TextBlock x:Name="JobTitleText"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+
+                    <TextBlock x:Name="JobDescriptionText"
+                               Foreground="LightGray"
+                               Margin="0 10"
+                               TextWrapping="Wrap"/>
+
+                    <Separator Margin="10"/>
+
+                    <TextBlock x:Name="SalaryText" Foreground="LightGreen" FontSize="18"/>
+                    <TextBlock x:Name="EnergyCostText" Foreground="Orange" FontSize="18"/>
+                    <TextBlock x:Name="ReputationText" Foreground="LightBlue" FontSize="18"/>
+
+                    <Button Content="Start Work"
+                            Height="50"
+                            Margin="0 20"
+                            Background="#FF22C55E"
+                            Click="BtnStartWork_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- RIGHT: HUD -->
+            <Border Grid.Column="2" Background="#AA000000" CornerRadius="12" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="👨‍💻 Employee Status"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+
+                    <TextBlock x:Name="SHMoneyText" Margin="6" Foreground="White"/>
+                    <TextBlock x:Name="SHEnergyText" Margin="6" Foreground="White"/>
+                    <TextBlock x:Name="SHSkillText" Margin="6" Foreground="White"/>
+                    <TextBlock x:Name="SHReputationText" Margin="6" Foreground="White"/>
+                    <TextBlock x:Name="SHJobText" Margin="6" Foreground="White"/>
+
+                    <Separator Margin="10"/>
+
+                    <Button Content="← Return to City"
+                            Height="40"
+                            Background="#FFEF4444"
+                            Foreground="White"
+                            Click="BtnExitSoftwareHouse_Click"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
